@@ -28,7 +28,7 @@ def apache2nginx(input_file: str, output_file: str) -> None:
                 sys.exit(1)
 
     with open(output_file, 'w', encoding='utf-8') as file:
-        file.write(parser.config)
+        file.write(parser.config())
 
 
 if __name__ == '__main__':

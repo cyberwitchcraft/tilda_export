@@ -2,16 +2,37 @@ from typing import List
 
 
 class ValidationError(Exception):
-    pass
+	pass
 
+STATIC_CONFIG = """
+server {
+	listen 80;
+	server_name ${DOMAIN} www.${DOMAIN};
+	root /opt/tilda-archive;
+	index page26167577.html;
+	error_page 404 /page26167932.html;
+	error_page 403 /page26167932.html;
+
+	access_log /var/log/nginx/sites/tilda-archive.access;
+	error_log /var/log/nginx/sites/tilda-archive.error;
+
+	listen 443 ssl; # managed by Certbot
+	ssl_certificate /etc/letsencrypt/live/${DOMAIN}/fullchain.pem; # managed by Certbot
+	ssl_certificate_key /etc/letsencrypt/live/${DOMAIN}/privkey.pem; # managed by Certbot
+	include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+	ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+"""
 
 class Parser:
     skip_next_lines: int
-    config: str
+    _config: str
 
     def __init__(self) -> None:
         self.skip_next_lines = 0
-        self.config = ''
+        self._config = STATIC_CONFIG + "\n"
+
+    def config(self) -> str:
+        return self._config + "}\n"
 
     def parseLine(self, config_line: str) -> None:
         if self.skip_next_lines > 0:
@@ -23,7 +44,7 @@ class Parser:
         result: str = ''
 
         if len(args) < 2:
-            self.config += result
+            self._config += result
             return
 
         directive = args[0]
@@ -38,7 +59,7 @@ class Parser:
             'Order',
             'RewriteEngine',
         ]:
-            self.config += result
+            self._config += result
             return
 
         match directive:
@@ -58,7 +79,7 @@ class Parser:
             case _:
                 print('unknown directive: ' + directive)
                 result = ''
-        self.config += result
+        self._config += result
 
 
 def validate(args: List[str], min_len: int = 2) -> None:
@@ -68,35 +89,36 @@ def validate(args: List[str], min_len: int = 2) -> None:
 
 def parseErrorDocument(args: List[str]) -> str:
     validate(args)
-    return f'error_page {args[0]} {args[1].strip()};\n\n'
+    return f'\terror_page {args[0]} {args[1].strip()};\n\n'
 
 
 def parseDirectoryIndex(args: List[str]) -> str:
     validate(args, min_len=1)
-    return f'index {args[0]};\n\n'
+    return f'\tindex {args[0]};\n\n'
 
 
 def parseDeny(_: List[str]) -> str:
-    return 'deny all;\n\n'
+    return '\tdeny all;\n\n'
 
 
 def parseSatisfy(_: List[str]) -> str:
-    return 'satisfy any;\n\n'
+    return '\tsatisfy any;\n\n'
 
 
 def parseRewriteCond(_: List[str]) -> str:
-    return """location / {
-    rewrite ^(.*)$ https://$http_host/$1 redirect;
-    if ($request_filename ~ /robots.txt){
-        rewrite ^(.*)$ /robots_$http_host.txt break;
-    }
-}\n
+    return """\tlocation / {
+    	rewrite ^(.*)$ https://$http_host/$1 redirect;
+    	if ($request_filename ~ /robots.txt){
+    		rewrite ^(.*)$ /robots_$http_host.txt break;
+    	}
+	}\n
 """
 
 
 def parseRewriteRule(args: List[str]) -> str:
     validate(args)
-    return f"""location = {args[0]} {{
-    rewrite ^(.*)$ {args[1]};
-}}\n
+    return f"""
+	location = {args[0]} {{
+		rewrite ^(.*)$ {args[1]};
+	}}\n
 """
