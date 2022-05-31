@@ -1,17 +1,14 @@
-from typing import List
+from typing import List, Optional
 
 
 class ValidationError(Exception):
-	pass
+    pass
 
-STATIC_CONFIG = """
-server {
+
+STATIC_CONFIG = """server {
 	listen 80;
 	server_name ${DOMAIN} www.${DOMAIN};
 	root /opt/tilda-archive;
-	index page26167577.html;
-	error_page 404 /page26167932.html;
-	error_page 403 /page26167932.html;
 
 	access_log /var/log/nginx/sites/tilda-archive.access;
 	error_log /var/log/nginx/sites/tilda-archive.error;
@@ -20,25 +17,19 @@ server {
 	ssl_certificate /etc/letsencrypt/live/${DOMAIN}/fullchain.pem; # managed by Certbot
 	ssl_certificate_key /etc/letsencrypt/live/${DOMAIN}/privkey.pem; # managed by Certbot
 	include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-	ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-"""
+	ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot"""
+
 
 class Parser:
-    skip_next_lines: int
     _config: str
 
     def __init__(self) -> None:
-        self.skip_next_lines = 0
         self._config = STATIC_CONFIG + "\n"
 
     def config(self) -> str:
         return self._config + "}\n"
 
     def parseLine(self, config_line: str) -> None:
-        if self.skip_next_lines > 0:
-            self.skip_next_lines -= 1
-            return
-
         args = config_line.split()
 
         result: str = ''
@@ -58,27 +49,17 @@ class Parser:
             'require',
             'Order',
             'RewriteEngine',
+            'Deny',
+            'Satisfy',
+            'RewriteCond'
         ]:
             self._config += result
             return
 
-        match directive:
-            case 'ErrorDocument':
-                result = parseErrorDocument(argv)
-            case 'DirectoryIndex':
-                result = parseDirectoryIndex(argv)
-            case 'Deny':
-                result = parseDeny(argv)
-            case 'Satisfy':
-                result = parseSatisfy(argv)
-            case 'RewriteCond':
-                self.skip_next_lines += 5
-                result = parseRewriteCond(argv)
-            case 'RewriteRule':
-                result = parseRewriteRule(argv)
-            case _:
-                print('unknown directive: ' + directive)
-                result = ''
+        if directive == 'RewriteRule':
+            result = parseRewriteRule(argv)
+        else:
+            result = ''
         self._config += result
 
 
@@ -97,28 +78,10 @@ def parseDirectoryIndex(args: List[str]) -> str:
     return f'\tindex {args[0]};\n\n'
 
 
-def parseDeny(_: List[str]) -> str:
-    return '\tdeny all;\n\n'
-
-
-def parseSatisfy(_: List[str]) -> str:
-    return '\tsatisfy any;\n\n'
-
-
-def parseRewriteCond(_: List[str]) -> str:
-    return """\tlocation / {
-    	rewrite ^(.*)$ https://$http_host/$1 redirect;
-    	if ($request_filename ~ /robots.txt){
-    		rewrite ^(.*)$ /robots_$http_host.txt break;
-    	}
-	}\n
-"""
-
-
-def parseRewriteRule(args: List[str]) -> str:
+def parseRewriteRule(args: List[str]) -> Optional[str]:
     validate(args)
     return f"""
-	location = {args[0]} {{
-		rewrite ^(.*)$ {args[1]};
-	}}\n
+    location = {args[0]} {{
+        rewrite ^(.*)$ {args[1]};
+    }}
 """
