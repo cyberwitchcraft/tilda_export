@@ -80,7 +80,7 @@ def parse_rewrite_rule(args: List[str]) -> Optional[str]:
         return ''
 
     return f"""
-    location = {args[0].strip("^$")} {{
-        rewrite ^(.*)$ {args[1]};
+    location = /{args[0].strip("^$")} {{
+        rewrite ^(.*)$ /{args[1]};
     }}
 """
