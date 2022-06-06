@@ -22,7 +22,7 @@ def apache2nginx(input_file: str, output_file: str) -> None:
     with open(input_file, 'r', encoding='utf-8') as file:
         for i, line in enumerate(file.readlines()):
             try:
-                parser.parseLine(line)
+                parser.parse_line(line)
             except ValidationError:
                 click.echo(f'failed to parse line {i}: {line}')
                 sys.exit(1)

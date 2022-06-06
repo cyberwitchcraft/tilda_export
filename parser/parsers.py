@@ -1,3 +1,4 @@
+import re
 from typing import List, Optional
 
 
@@ -29,7 +30,7 @@ class Parser:
     def config(self) -> str:
         return self._config + "}\n"
 
-    def parseLine(self, config_line: str) -> None:
+    def parse_line(self, config_line: str) -> None:
         args = config_line.split()
 
         result: str = ''
@@ -57,7 +58,7 @@ class Parser:
             return
 
         if directive == 'RewriteRule':
-            result = parseRewriteRule(argv)
+            result = parse_rewrite_rule(argv)
         else:
             result = ''
         self._config += result
@@ -68,18 +69,12 @@ def validate(args: List[str], min_len: int = 2) -> None:
         raise ValidationError
 
 
-def parseErrorDocument(args: List[str]) -> str:
+def parse_rewrite_rule(args: List[str]) -> Optional[str]:
     validate(args)
-    return f'\terror_page {args[0]} {args[1].strip()};\n\n'
 
+    if "HTTP_HOST" in args[1]:
+        return ''
 
-def parseDirectoryIndex(args: List[str]) -> str:
-    validate(args, min_len=1)
-    return f'\tindex {args[0]};\n\n'
-
-
-def parseRewriteRule(args: List[str]) -> Optional[str]:
-    validate(args)
     return f"""
     location = {args[0]} {{
         rewrite ^(.*)$ {args[1]};
