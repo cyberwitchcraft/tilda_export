@@ -7,18 +7,22 @@ class ValidationError(Exception):
 
 
 STATIC_CONFIG = """server {
-	listen 80;
-	server_name ${DOMAIN} www.${DOMAIN};
-	root /opt/tilda-archive;
+    listen 80;
+    server_name ${DOMAIN} www.${DOMAIN};
+    root /opt/tilda-archive;
 
-	access_log /var/log/nginx/sites/tilda-archive.access;
-	error_log /var/log/nginx/sites/tilda-archive.error;
+    access_log /var/log/nginx/sites/tilda-archive.access;
+    error_log /var/log/nginx/sites/tilda-archive.error;
 
-	listen 443 ssl; # managed by Certbot
-	ssl_certificate /etc/letsencrypt/live/${DOMAIN}/fullchain.pem; # managed by Certbot
-	ssl_certificate_key /etc/letsencrypt/live/${DOMAIN}/privkey.pem; # managed by Certbot
-	include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-	ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot"""
+    index page26167577.html;
+    error_page 404 /page26167932.html;
+    error_page 403 /page26167932.html;
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/${DOMAIN}/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/${DOMAIN}/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot"""
 
 
 class Parser:
@@ -76,7 +80,7 @@ def parse_rewrite_rule(args: List[str]) -> Optional[str]:
         return ''
 
     return f"""
-    location = {args[0]} {{
+    location = {args[0].strip("^$")} {{
         rewrite ^(.*)$ {args[1]};
     }}
 """
