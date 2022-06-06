@@ -1,0 +1,1622 @@
+ErrorDocument 403 /page26167932.html
+ErrorDocument 404 /page26167932.html
+
+DirectoryIndex page26167577.html
+
+AuthType Basic
+AuthName "Restricted Area"
+AuthUserFile /var/www/tilda/data/www/tilda.ws/.htpasswd
+require valid-user
+Order deny,allow
+Deny from all
+Satisfy any
+
+RewriteEngine On
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^inliberty_2021$ page26168070.html [NC]
+RewriteRule ^inliberty_2021/$ page26168070.html [NC]
+
+RewriteRule ^doxa$ page26167577.html [NC]
+RewriteRule ^doxa/$ page26167577.html [NC]
+
+RewriteRule ^uni$ page26167579.html [NC]
+RewriteRule ^uni/$ page26167579.html [NC]
+
+RewriteRule ^stadis$ page26167734.html [NC]
+RewriteRule ^stadis/$ page26167734.html [NC]
+
+RewriteRule ^donate$ page26167840.html [NC]
+RewriteRule ^donate/$ page26167840.html [NC]
+
+RewriteRule ^guides$ page26168011.html [NC]
+RewriteRule ^guides/$ page26168011.html [NC]
+
+RewriteRule ^contact$ page26167733.html [NC]
+RewriteRule ^contact/$ page26167733.html [NC]
+
+RewriteRule ^texts$ page26167584.html [NC]
+RewriteRule ^texts/$ page26167584.html [NC]
+
+RewriteRule ^events$ page26167585.html [NC]
+RewriteRule ^events/$ page26167585.html [NC]
+
+RewriteRule ^support$ page26167736.html [NC]
+RewriteRule ^support/$ page26167736.html [NC]
+
+RewriteRule ^donate_test$ page26168089.html [NC]
+RewriteRule ^donate_test/$ page26168089.html [NC]
+
+RewriteRule ^media$ page26167590.html [NC]
+RewriteRule ^media/$ page26167590.html [NC]
+
+RewriteRule ^head$ page26167581.html [NC]
+RewriteRule ^head/$ page26167581.html [NC]
+
+RewriteRule ^translations$ page26167586.html [NC]
+RewriteRule ^translations/$ page26167586.html [NC]
+
+RewriteRule ^about$ page26167578.html [NC]
+RewriteRule ^about/$ page26167578.html [NC]
+
+RewriteRule ^texts/essays$ page26167583.html [NC]
+RewriteRule ^texts/essays/$ page26167583.html [NC]
+
+RewriteRule ^uni/worst_16$ page26167596.html [NC]
+RewriteRule ^uni/worst_16/$ page26167596.html [NC]
+
+RewriteRule ^texts/specrealism$ page26167599.html [NC]
+RewriteRule ^texts/specrealism/$ page26167599.html [NC]
+
+RewriteRule ^texts/mu_01_17$ page26167591.html [NC]
+RewriteRule ^texts/mu_01_17/$ page26167591.html [NC]
+
+RewriteRule ^texts/whitephilosophy$ page26167593.html [NC]
+RewriteRule ^texts/whitephilosophy/$ page26167593.html [NC]
+
+RewriteRule ^texts/trump$ page26167592.html [NC]
+RewriteRule ^texts/trump/$ page26167592.html [NC]
+
+RewriteRule ^uni/meeting$ page26167600.html [NC]
+RewriteRule ^uni/meeting/$ page26167600.html [NC]
+
+RewriteRule ^texts/silence$ page26167601.html [NC]
+RewriteRule ^texts/silence/$ page26167601.html [NC]
+
+RewriteRule ^texts/projects$ page26167588.html [NC]
+RewriteRule ^texts/projects/$ page26167588.html [NC]
+
+RewriteRule ^texts/lalala$ page26167602.html [NC]
+RewriteRule ^texts/lalala/$ page26167602.html [NC]
+
+RewriteRule ^media/graeber$ page26167605.html [NC]
+RewriteRule ^media/graeber/$ page26167605.html [NC]
+
+RewriteRule ^uni/math$ page26167608.html [NC]
+RewriteRule ^uni/math/$ page26167608.html [NC]
+
+RewriteRule ^uni/msufest$ page26167609.html [NC]
+RewriteRule ^uni/msufest/$ page26167609.html [NC]
+
+RewriteRule ^mu_02_17$ page26167607.html [NC]
+RewriteRule ^mu_02_17/$ page26167607.html [NC]
+
+RewriteRule ^reviews/moonlight$ page26167610.html [NC]
+RewriteRule ^reviews/moonlight/$ page26167610.html [NC]
+
+RewriteRule ^media/termpapers$ page26167611.html [NC]
+RewriteRule ^media/termpapers/$ page26167611.html [NC]
+
+RewriteRule ^media/may1968$ page26167613.html [NC]
+RewriteRule ^media/may1968/$ page26167613.html [NC]
+
+RewriteRule ^media/respublica$ page26167614.html [NC]
+RewriteRule ^media/respublica/$ page26167614.html [NC]
+
+RewriteRule ^texts/reviews$ page26167587.html [NC]
+RewriteRule ^texts/reviews/$ page26167587.html [NC]
+
+RewriteRule ^events/femfest$ page26167615.html [NC]
+RewriteRule ^events/femfest/$ page26167615.html [NC]
+
+RewriteRule ^en$ page26167658.html [NC]
+RewriteRule ^en/$ page26167658.html [NC]
+
+RewriteRule ^uni/on_plagiarism$ page26167695.html [NC]
+RewriteRule ^uni/on_plagiarism/$ page26167695.html [NC]
+
+RewriteRule ^uni/minor$ page26167617.html [NC]
+RewriteRule ^uni/minor/$ page26167617.html [NC]
+
+RewriteRule ^uni/dubkileaks$ page26167618.html [NC]
+RewriteRule ^uni/dubkileaks/$ page26167618.html [NC]
+
+RewriteRule ^reviews/life$ page26167619.html [NC]
+RewriteRule ^reviews/life/$ page26167619.html [NC]
+
+RewriteRule ^uni/minors$ page26167621.html [NC]
+RewriteRule ^uni/minors/$ page26167621.html [NC]
+
+RewriteRule ^uni/exams$ page26167620.html [NC]
+RewriteRule ^uni/exams/$ page26167620.html [NC]
+
+RewriteRule ^media/academ$ page26167624.html [NC]
+RewriteRule ^media/academ/$ page26167624.html [NC]
+
+RewriteRule ^uni/misshse$ page26167626.html [NC]
+RewriteRule ^uni/misshse/$ page26167626.html [NC]
+
+RewriteRule ^uni/euspb$ page26167612.html [NC]
+RewriteRule ^uni/euspb/$ page26167612.html [NC]
+
+RewriteRule ^eu_letter$ page26167628.html [NC]
+RewriteRule ^eu_letter/$ page26167628.html [NC]
+
+RewriteRule ^texts/voyageoftime$ page26167629.html [NC]
+RewriteRule ^texts/voyageoftime/$ page26167629.html [NC]
+
+RewriteRule ^texts/mu_03_17$ page26167630.html [NC]
+RewriteRule ^texts/mu_03_17/$ page26167630.html [NC]
+
+RewriteRule ^events/bars$ page26167631.html [NC]
+RewriteRule ^events/bars/$ page26167631.html [NC]
+
+RewriteRule ^uni/truephilosophers$ page26167632.html [NC]
+RewriteRule ^uni/truephilosophers/$ page26167632.html [NC]
+
+RewriteRule ^texts/deaddad$ page26167633.html [NC]
+RewriteRule ^texts/deaddad/$ page26167633.html [NC]
+
+RewriteRule ^texts/france2017$ page26167634.html [NC]
+RewriteRule ^texts/france2017/$ page26167634.html [NC]
+
+RewriteRule ^uni/ethicscode$ page26167696.html [NC]
+RewriteRule ^uni/ethicscode/$ page26167696.html [NC]
+
+RewriteRule ^uni/impeachment$ page26167635.html [NC]
+RewriteRule ^uni/impeachment/$ page26167635.html [NC]
+
+RewriteRule ^uni/theend1$ page26167636.html [NC]
+RewriteRule ^uni/theend1/$ page26167636.html [NC]
+
+RewriteRule ^uni/theend2$ page26167637.html [NC]
+RewriteRule ^uni/theend2/$ page26167637.html [NC]
+
+RewriteRule ^uni/theend3$ page26167639.html [NC]
+RewriteRule ^uni/theend3/$ page26167639.html [NC]
+
+RewriteRule ^texts/mu_05_17$ page26167640.html [NC]
+RewriteRule ^texts/mu_05_17/$ page26167640.html [NC]
+
+RewriteRule ^texts/june12$ page26167642.html [NC]
+RewriteRule ^texts/june12/$ page26167642.html [NC]
+
+RewriteRule ^uni/misshseprotest_ru$ page26167643.html [NC]
+RewriteRule ^uni/misshseprotest_ru/$ page26167643.html [NC]
+
+RewriteRule ^en/uni$ page26167659.html [NC]
+RewriteRule ^en/uni/$ page26167659.html [NC]
+
+RewriteRule ^uni/msu-letter$ page26167697.html [NC]
+RewriteRule ^uni/msu-letter/$ page26167697.html [NC]
+
+RewriteRule ^uni/misshseprotest_en$ page26167644.html [NC]
+RewriteRule ^uni/misshseprotest_en/$ page26167644.html [NC]
+
+RewriteRule ^uni/misshsenofun$ page26167645.html [NC]
+RewriteRule ^uni/misshsenofun/$ page26167645.html [NC]
+
+RewriteRule ^texts/barskova$ page26167646.html [NC]
+RewriteRule ^texts/barskova/$ page26167646.html [NC]
+
+RewriteRule ^texts/goodtime$ page26167649.html [NC]
+RewriteRule ^texts/goodtime/$ page26167649.html [NC]
+
+RewriteRule ^texts/mu_10_17$ page26167650.html [NC]
+RewriteRule ^texts/mu_10_17/$ page26167650.html [NC]
+
+RewriteRule ^events/gdemnepochitat$ page26167648.html [NC]
+RewriteRule ^events/gdemnepochitat/$ page26167648.html [NC]
+
+RewriteRule ^texts/reviews/games_05_10_17$ page26167651.html [NC]
+RewriteRule ^texts/reviews/games_05_10_17/$ page26167651.html [NC]
+
+RewriteRule ^en/texts$ page26167660.html [NC]
+RewriteRule ^en/texts/$ page26167660.html [NC]
+
+RewriteRule ^uni/mexico$ page26167652.html [NC]
+RewriteRule ^uni/mexico/$ page26167652.html [NC]
+
+RewriteRule ^uni/ryabov$ page26167653.html [NC]
+RewriteRule ^uni/ryabov/$ page26167653.html [NC]
+
+RewriteRule ^texts/mori$ page26167654.html [NC]
+RewriteRule ^texts/mori/$ page26167654.html [NC]
+
+RewriteRule ^texts/games_06_11_2017$ page26167656.html [NC]
+RewriteRule ^texts/games_06_11_2017/$ page26167656.html [NC]
+
+RewriteRule ^texts/alpert$ page26167655.html [NC]
+RewriteRule ^texts/alpert/$ page26167655.html [NC]
+
+RewriteRule ^en/texts/zizek1$ page26167661.html [NC]
+RewriteRule ^en/texts/zizek1/$ page26167661.html [NC]
+
+RewriteRule ^texts/interview$ page26167657.html [NC]
+RewriteRule ^texts/interview/$ page26167657.html [NC]
+
+RewriteRule ^review/snowman$ page26167663.html [NC]
+RewriteRule ^review/snowman/$ page26167663.html [NC]
+
+RewriteRule ^review/coldskin$ page26167665.html [NC]
+RewriteRule ^review/coldskin/$ page26167665.html [NC]
+
+RewriteRule ^uni/hse25$ page26167664.html [NC]
+RewriteRule ^uni/hse25/$ page26167664.html [NC]
+
+RewriteRule ^review/battleofthesexes$ page26167666.html [NC]
+RewriteRule ^review/battleofthesexes/$ page26167666.html [NC]
+
+RewriteRule ^uni/skwiernyj$ page26167667.html [NC]
+RewriteRule ^uni/skwiernyj/$ page26167667.html [NC]
+
+RewriteRule ^texts/schastlivydensmerti$ page26167669.html [NC]
+RewriteRule ^texts/schastlivydensmerti/$ page26167669.html [NC]
+
+RewriteRule ^texts/gringofilm$ page26167698.html [NC]
+RewriteRule ^texts/gringofilm/$ page26167698.html [NC]
+
+RewriteRule ^review/rabelintherye$ page26167670.html [NC]
+RewriteRule ^review/rabelintherye/$ page26167670.html [NC]
+
+RewriteRule ^texts/mgimo$ page26167671.html [NC]
+RewriteRule ^texts/mgimo/$ page26167671.html [NC]
+
+RewriteRule ^uni/hse1$ page26167672.html [NC]
+RewriteRule ^uni/hse1/$ page26167672.html [NC]
+
+RewriteRule ^uni/rggu$ page26167673.html [NC]
+RewriteRule ^uni/rggu/$ page26167673.html [NC]
+
+RewriteRule ^texts/mertro$ page26167674.html [NC]
+RewriteRule ^texts/mertro/$ page26167674.html [NC]
+
+RewriteRule ^texts/moliere$ page26167676.html [NC]
+RewriteRule ^texts/moliere/$ page26167676.html [NC]
+
+RewriteRule ^en/texts/zizek2$ page26167675.html [NC]
+RewriteRule ^en/texts/zizek2/$ page26167675.html [NC]
+
+RewriteRule ^texts/darkseries$ page26167678.html [NC]
+RewriteRule ^texts/darkseries/$ page26167678.html [NC]
+
+RewriteRule ^uni/elections2018$ page26167679.html [NC]
+RewriteRule ^uni/elections2018/$ page26167679.html [NC]
+
+RewriteRule ^phantomthread$ page26167681.html [NC]
+RewriteRule ^phantomthread/$ page26167681.html [NC]
+
+RewriteRule ^podval123$ page26167597.html [NC]
+RewriteRule ^podval123/$ page26167597.html [NC]
+
+RewriteRule ^uni/pegas2018$ page26167683.html [NC]
+RewriteRule ^uni/pegas2018/$ page26167683.html [NC]
+
+RewriteRule ^uni/mentalillnessfgn$ page26167684.html [NC]
+RewriteRule ^uni/mentalillnessfgn/$ page26167684.html [NC]
+
+RewriteRule ^uni/msu_slutsky$ page26167685.html [NC]
+RewriteRule ^uni/msu_slutsky/$ page26167685.html [NC]
+
+RewriteRule ^texts/annihilation$ page26167687.html [NC]
+RewriteRule ^texts/annihilation/$ page26167687.html [NC]
+
+RewriteRule ^texts/abeautifulday$ page26167689.html [NC]
+RewriteRule ^texts/abeautifulday/$ page26167689.html [NC]
+
+RewriteRule ^uni/nocensorshiphse$ page26167690.html [NC]
+RewriteRule ^uni/nocensorshiphse/$ page26167690.html [NC]
+
+RewriteRule ^texts/touchmenot$ page26167692.html [NC]
+RewriteRule ^texts/touchmenot/$ page26167692.html [NC]
+
+RewriteRule ^texts/internetstudies$ page26167693.html [NC]
+RewriteRule ^texts/internetstudies/$ page26167693.html [NC]
+
+RewriteRule ^uni/media-letter-2$ page26167694.html [NC]
+RewriteRule ^uni/media-letter-2/$ page26167694.html [NC]
+
+RewriteRule ^may68$ page26167699.html [NC]
+RewriteRule ^may68/$ page26167699.html [NC]
+
+RewriteRule ^may1968$ page26167700.html [NC]
+RewriteRule ^may1968/$ page26167700.html [NC]
+
+RewriteRule ^texts/may68_china$ page26167701.html [NC]
+RewriteRule ^texts/may68_china/$ page26167701.html [NC]
+
+RewriteRule ^uni/msu_philologists$ page26167702.html [NC]
+RewriteRule ^uni/msu_philologists/$ page26167702.html [NC]
+
+RewriteRule ^uni/shaninka$ page26167705.html [NC]
+RewriteRule ^uni/shaninka/$ page26167705.html [NC]
+
+RewriteRule ^uni/msses_2018$ page26167706.html [NC]
+RewriteRule ^uni/msses_2018/$ page26167706.html [NC]
+
+RewriteRule ^uni/lubyanka$ page26167708.html [NC]
+RewriteRule ^uni/lubyanka/$ page26167708.html [NC]
+
+RewriteRule ^uni/harassment_1$ page26167710.html [NC]
+RewriteRule ^uni/harassment_1/$ page26167710.html [NC]
+
+RewriteRule ^uni/autonomy$ page26167711.html [NC]
+RewriteRule ^uni/autonomy/$ page26167711.html [NC]
+
+RewriteRule ^uni/ceupereezd$ page26167712.html [NC]
+RewriteRule ^uni/ceupereezd/$ page26167712.html [NC]
+
+RewriteRule ^uni/liberalartsinrussia$ page26167713.html [NC]
+RewriteRule ^uni/liberalartsinrussia/$ page26167713.html [NC]
+
+RewriteRule ^uni/5reasons$ page26167715.html [NC]
+RewriteRule ^uni/5reasons/$ page26167715.html [NC]
+
+RewriteRule ^uni/polandantropology$ page26167716.html [NC]
+RewriteRule ^uni/polandantropology/$ page26167716.html [NC]
+
+RewriteRule ^uni/harassment_hse$ page26167717.html [NC]
+RewriteRule ^uni/harassment_hse/$ page26167717.html [NC]
+
+RewriteRule ^uni/bloki$ page26167718.html [NC]
+RewriteRule ^uni/bloki/$ page26167718.html [NC]
+
+RewriteRule ^events/di_school_ru$ page26167719.html [NC]
+RewriteRule ^events/di_school_ru/$ page26167719.html [NC]
+
+RewriteRule ^goroscopes2019$ page26167721.html [NC]
+RewriteRule ^goroscopes2019/$ page26167721.html [NC]
+
+RewriteRule ^uni/comission$ page26167722.html [NC]
+RewriteRule ^uni/comission/$ page26167722.html [NC]
+
+RewriteRule ^uni/control$ page26167725.html [NC]
+RewriteRule ^uni/control/$ page26167725.html [NC]
+
+RewriteRule ^events/crises2019$ page26167729.html [NC]
+RewriteRule ^events/crises2019/$ page26167729.html [NC]
+
+RewriteRule ^militarism$ page26167727.html [NC]
+RewriteRule ^militarism/$ page26167727.html [NC]
+
+RewriteRule ^events/crises2019_en$ page26167730.html [NC]
+RewriteRule ^events/crises2019_en/$ page26167730.html [NC]
+
+RewriteRule ^uni/fish$ page26167731.html [NC]
+RewriteRule ^uni/fish/$ page26167731.html [NC]
+
+RewriteRule ^uni/labourunionshse$ page26167732.html [NC]
+RewriteRule ^uni/labourunionshse/$ page26167732.html [NC]
+
+RewriteRule ^stadis/1-19$ page26167735.html [NC]
+RewriteRule ^stadis/1-19/$ page26167735.html [NC]
+
+RewriteRule ^stadis/change_history$ page26167737.html [NC]
+RewriteRule ^stadis/change_history/$ page26167737.html [NC]
+
+RewriteRule ^uni/conference_hse$ page26167738.html [NC]
+RewriteRule ^uni/conference_hse/$ page26167738.html [NC]
+
+RewriteRule ^uni/detentions_july27$ page26167786.html [NC]
+RewriteRule ^uni/detentions_july27/$ page26167786.html [NC]
+
+RewriteRule ^doxa_ovd$ page26167793.html [NC]
+RewriteRule ^doxa_ovd/$ page26167793.html [NC]
+
+RewriteRule ^stadis/inopportune_again$ page26167740.html [NC]
+RewriteRule ^stadis/inopportune_again/$ page26167740.html [NC]
+
+RewriteRule ^stadis/machine_animism$ page26167743.html [NC]
+RewriteRule ^stadis/machine_animism/$ page26167743.html [NC]
+
+RewriteRule ^infrastructure_modern_2$ page26167746.html [NC]
+RewriteRule ^infrastructure_modern_2/$ page26167746.html [NC]
+
+RewriteRule ^stadis/ecology_life$ page26167745.html [NC]
+RewriteRule ^stadis/ecology_life/$ page26167745.html [NC]
+
+RewriteRule ^stadis/delicious_french$ page26167747.html [NC]
+RewriteRule ^stadis/delicious_french/$ page26167747.html [NC]
+
+RewriteRule ^translations/gender_frame$ page26167750.html [NC]
+RewriteRule ^translations/gender_frame/$ page26167750.html [NC]
+
+RewriteRule ^stadis/selva_selvaggia$ page26167749.html [NC]
+RewriteRule ^stadis/selva_selvaggia/$ page26167749.html [NC]
+
+RewriteRule ^antiuniversity$ page26167753.html [NC]
+RewriteRule ^antiuniversity/$ page26167753.html [NC]
+
+RewriteRule ^uni/archieve_closed$ page26167752.html [NC]
+RewriteRule ^uni/archieve_closed/$ page26167752.html [NC]
+
+RewriteRule ^uni/creation_political$ page26167754.html [NC]
+RewriteRule ^uni/creation_political/$ page26167754.html [NC]
+
+RewriteRule ^stadis/ineffective_egoism$ page26167755.html [NC]
+RewriteRule ^stadis/ineffective_egoism/$ page26167755.html [NC]
+
+RewriteRule ^stadis/delegation_problematics$ page26167756.html [NC]
+RewriteRule ^stadis/delegation_problematics/$ page26167756.html [NC]
+
+RewriteRule ^infrastructure_modern_3$ page26167760.html [NC]
+RewriteRule ^infrastructure_modern_3/$ page26167760.html [NC]
+
+RewriteRule ^uni/harassment_contingence$ page26167757.html [NC]
+RewriteRule ^uni/harassment_contingence/$ page26167757.html [NC]
+
+RewriteRule ^uni/conference_issues$ page26167759.html [NC]
+RewriteRule ^uni/conference_issues/$ page26167759.html [NC]
+
+RewriteRule ^harassment_discussion$ page26167761.html [NC]
+RewriteRule ^harassment_discussion/$ page26167761.html [NC]
+
+RewriteRule ^cherubic_slytsky$ page26167765.html [NC]
+RewriteRule ^cherubic_slytsky/$ page26167765.html [NC]
+
+RewriteRule ^stadis/social_in_media$ page26167762.html [NC]
+RewriteRule ^stadis/social_in_media/$ page26167762.html [NC]
+
+RewriteRule ^uni/gender_investigation_sfu$ page26167764.html [NC]
+RewriteRule ^uni/gender_investigation_sfu/$ page26167764.html [NC]
+
+RewriteRule ^stadis/sociologyofmedia$ page26167768.html [NC]
+RewriteRule ^stadis/sociologyofmedia/$ page26167768.html [NC]
+
+RewriteRule ^uni/12th_june_demo$ page26167766.html [NC]
+RewriteRule ^uni/12th_june_demo/$ page26167766.html [NC]
+
+RewriteRule ^editorialboard$ page26167770.html [NC]
+RewriteRule ^editorialboard/$ page26167770.html [NC]
+
+RewriteRule ^uni/interview_gelfand$ page26167771.html [NC]
+RewriteRule ^uni/interview_gelfand/$ page26167771.html [NC]
+
+RewriteRule ^stadis/platonism_fetishism$ page26167772.html [NC]
+RewriteRule ^stadis/platonism_fetishism/$ page26167772.html [NC]
+
+RewriteRule ^uni/spbu_students_riot$ page26167773.html [NC]
+RewriteRule ^uni/spbu_students_riot/$ page26167773.html [NC]
+
+RewriteRule ^uni/dopuskay2019$ page26167774.html [NC]
+RewriteRule ^uni/dopuskay2019/$ page26167774.html [NC]
+
+RewriteRule ^uni/the1752_interview$ page26167776.html [NC]
+RewriteRule ^uni/the1752_interview/$ page26167776.html [NC]
+
+RewriteRule ^uni/metaobjective_connections$ page26167777.html [NC]
+RewriteRule ^uni/metaobjective_connections/$ page26167777.html [NC]
+
+RewriteRule ^uni/direct_speech_spbu$ page26167778.html [NC]
+RewriteRule ^uni/direct_speech_spbu/$ page26167778.html [NC]
+
+RewriteRule ^donate_students$ page26167784.html [NC]
+RewriteRule ^donate_students/$ page26167784.html [NC]
+
+RewriteRule ^doxaovd_bot$ page26167788.html [NC]
+RewriteRule ^doxaovd_bot/$ page26167788.html [NC]
+
+RewriteRule ^uni/detentions_faq$ page26167789.html [NC]
+RewriteRule ^uni/detentions_faq/$ page26167789.html [NC]
+
+RewriteRule ^uni/juliagalyamina$ page26167787.html [NC]
+RewriteRule ^uni/juliagalyamina/$ page26167787.html [NC]
+
+RewriteRule ^uni/egorzhukov$ page26167790.html [NC]
+RewriteRule ^uni/egorzhukov/$ page26167790.html [NC]
+
+RewriteRule ^uni/bolotnikyinterview$ page26167791.html [NC]
+RewriteRule ^uni/bolotnikyinterview/$ page26167791.html [NC]
+
+RewriteRule ^uni/daniilkonon$ page26167794.html [NC]
+RewriteRule ^uni/daniilkonon/$ page26167794.html [NC]
+
+RewriteRule ^letter_aatseel$ page26167797.html [NC]
+RewriteRule ^letter_aatseel/$ page26167797.html [NC]
+
+RewriteRule ^help_azat$ page26167832.html [NC]
+RewriteRule ^help_azat/$ page26167832.html [NC]
+
+RewriteRule ^uni/emotionalburnout$ page26167799.html [NC]
+RewriteRule ^uni/emotionalburnout/$ page26167799.html [NC]
+
+RewriteRule ^antiuni$ page26167801.html [NC]
+RewriteRule ^antiuni/$ page26167801.html [NC]
+
+RewriteRule ^stadis/anthropophagy$ page26167803.html [NC]
+RewriteRule ^stadis/anthropophagy/$ page26167803.html [NC]
+
+RewriteRule ^uni/mytozhedoxa$ page26167808.html [NC]
+RewriteRule ^uni/mytozhedoxa/$ page26167808.html [NC]
+
+RewriteRule ^stadis/madeinchina$ page26167804.html [NC]
+RewriteRule ^stadis/madeinchina/$ page26167804.html [NC]
+
+RewriteRule ^uni/doxahseday$ page26167806.html [NC]
+RewriteRule ^uni/doxahseday/$ page26167806.html [NC]
+
+RewriteRule ^uni/nominee_rgsu$ page26167807.html [NC]
+RewriteRule ^uni/nominee_rgsu/$ page26167807.html [NC]
+
+RewriteRule ^uni/students_summer_2019$ page26167811.html [NC]
+RewriteRule ^uni/students_summer_2019/$ page26167811.html [NC]
+
+RewriteRule ^uni/back_in_the_ussr$ page26167809.html [NC]
+RewriteRule ^uni/back_in_the_ussr/$ page26167809.html [NC]
+
+RewriteRule ^doxa_ovd/nemassovka$ page26167810.html [NC]
+RewriteRule ^doxa_ovd/nemassovka/$ page26167810.html [NC]
+
+RewriteRule ^uni/students_against_junta$ page26167812.html [NC]
+RewriteRule ^uni/students_against_junta/$ page26167812.html [NC]
+
+RewriteRule ^uni/ceu_lessons$ page26167815.html [NC]
+RewriteRule ^uni/ceu_lessons/$ page26167815.html [NC]
+
+RewriteRule ^uni/students_parade$ page26167817.html [NC]
+RewriteRule ^uni/students_parade/$ page26167817.html [NC]
+
+RewriteRule ^studproblem_discussion$ page26167818.html [NC]
+RewriteRule ^studproblem_discussion/$ page26167818.html [NC]
+
+RewriteRule ^stadis/love_with_dead$ page26167819.html [NC]
+RewriteRule ^stadis/love_with_dead/$ page26167819.html [NC]
+
+RewriteRule ^uni/dormitories_stories$ page26167820.html [NC]
+RewriteRule ^uni/dormitories_stories/$ page26167820.html [NC]
+
+RewriteRule ^uni/igran$ page26167823.html [NC]
+RewriteRule ^uni/igran/$ page26167823.html [NC]
+
+RewriteRule ^uni/students_rioghts$ page26167824.html [NC]
+RewriteRule ^uni/students_rioghts/$ page26167824.html [NC]
+
+RewriteRule ^uni/spsu_relocation$ page26167825.html [NC]
+RewriteRule ^uni/spsu_relocation/$ page26167825.html [NC]
+
+RewriteRule ^uni/artyomfirsanov$ page26167827.html [NC]
+RewriteRule ^uni/artyomfirsanov/$ page26167827.html [NC]
+
+RewriteRule ^uni/mipt_bund$ page26167831.html [NC]
+RewriteRule ^uni/mipt_bund/$ page26167831.html [NC]
+
+RewriteRule ^stadis/goodbye_postsocialism$ page26167829.html [NC]
+RewriteRule ^stadis/goodbye_postsocialism/$ page26167829.html [NC]
+
+RewriteRule ^uni/rectors_test$ page26167838.html [NC]
+RewriteRule ^uni/rectors_test/$ page26167838.html [NC]
+
+RewriteRule ^uni/studsovety_spbgu$ page26167845.html [NC]
+RewriteRule ^uni/studsovety_spbgu/$ page26167845.html [NC]
+
+RewriteRule ^thestudentsnames$ page26167833.html [NC]
+RewriteRule ^thestudentsnames/$ page26167833.html [NC]
+
+RewriteRule ^uni/msu_journalismopenletter$ page26167835.html [NC]
+RewriteRule ^uni/msu_journalismopenletter/$ page26167835.html [NC]
+
+RewriteRule ^uni/spetzpriem_review$ page26167836.html [NC]
+RewriteRule ^uni/spetzpriem_review/$ page26167836.html [NC]
+
+RewriteRule ^uni/ehu_protests$ page26167842.html [NC]
+RewriteRule ^uni/ehu_protests/$ page26167842.html [NC]
+
+RewriteRule ^uni/interview_zhukov$ page26167856.html [NC]
+RewriteRule ^uni/interview_zhukov/$ page26167856.html [NC]
+
+RewriteRule ^uni/lyon_selfimmolation$ page26167847.html [NC]
+RewriteRule ^uni/lyon_selfimmolation/$ page26167847.html [NC]
+
+RewriteRule ^uni/women_timeline$ page26167848.html [NC]
+RewriteRule ^uni/women_timeline/$ page26167848.html [NC]
+
+RewriteRule ^uni/carin_clement$ page26167849.html [NC]
+RewriteRule ^uni/carin_clement/$ page26167849.html [NC]
+
+RewriteRule ^uni/radical_academ$ page26167850.html [NC]
+RewriteRule ^uni/radical_academ/$ page26167850.html [NC]
+
+RewriteRule ^stadis/cage$ page26167852.html [NC]
+RewriteRule ^stadis/cage/$ page26167852.html [NC]
+
+RewriteRule ^doxa_hse_2$ page26167853.html [NC]
+RewriteRule ^doxa_hse_2/$ page26167853.html [NC]
+
+RewriteRule ^uni/zhukov_photo$ page26167854.html [NC]
+RewriteRule ^uni/zhukov_photo/$ page26167854.html [NC]
+
+RewriteRule ^reloaded$ page26167707.html [NC]
+RewriteRule ^reloaded/$ page26167707.html [NC]
+
+RewriteRule ^uni/rudn$ page26167858.html [NC]
+RewriteRule ^uni/rudn/$ page26167858.html [NC]
+
+RewriteRule ^uni/stalin_mpgu$ page26167860.html [NC]
+RewriteRule ^uni/stalin_mpgu/$ page26167860.html [NC]
+
+RewriteRule ^p/gaidpark2020$ page26167861.html [NC]
+RewriteRule ^p/gaidpark2020/$ page26167861.html [NC]
+
+RewriteRule ^uni/zapesotsky$ page26167859.html [NC]
+RewriteRule ^uni/zapesotsky/$ page26167859.html [NC]
+
+RewriteRule ^stadis/long68$ page26167862.html [NC]
+RewriteRule ^stadis/long68/$ page26167862.html [NC]
+
+RewriteRule ^support_networkcase$ page26167881.html [NC]
+RewriteRule ^support_networkcase/$ page26167881.html [NC]
+
+RewriteRule ^uni/rector_principle$ page26167865.html [NC]
+RewriteRule ^uni/rector_principle/$ page26167865.html [NC]
+
+RewriteRule ^uni/repression_student$ page26167871.html [NC]
+RewriteRule ^uni/repression_student/$ page26167871.html [NC]
+
+RewriteRule ^joinus2020$ page26167872.html [NC]
+RewriteRule ^joinus2020/$ page26167872.html [NC]
+
+RewriteRule ^uni/uni_vs_coronavirus$ page26167889.html [NC]
+RewriteRule ^uni/uni_vs_coronavirus/$ page26167889.html [NC]
+
+RewriteRule ^stadis/foucaults_virginity$ page26167875.html [NC]
+RewriteRule ^stadis/foucaults_virginity/$ page26167875.html [NC]
+
+RewriteRule ^uni/vne_sebya$ page26167877.html [NC]
+RewriteRule ^uni/vne_sebya/$ page26167877.html [NC]
+
+RewriteRule ^monolog_shakyrskoi$ page26167878.html [NC]
+RewriteRule ^monolog_shakyrskoi/$ page26167878.html [NC]
+
+RewriteRule ^uni/marsu$ page26167895.html [NC]
+RewriteRule ^uni/marsu/$ page26167895.html [NC]
+
+RewriteRule ^events/labourstudies2020$ page26167876.html [NC]
+RewriteRule ^events/labourstudies2020/$ page26167876.html [NC]
+
+RewriteRule ^uni/surveillance_rgsu$ page26167879.html [NC]
+RewriteRule ^uni/surveillance_rgsu/$ page26167879.html [NC]
+
+RewriteRule ^uni/hiv_positive$ page26167900.html [NC]
+RewriteRule ^uni/hiv_positive/$ page26167900.html [NC]
+
+RewriteRule ^uni/digest_ethics$ page26167882.html [NC]
+RewriteRule ^uni/digest_ethics/$ page26167882.html [NC]
+
+RewriteRule ^uni/psy_interview_brushlinsky$ page26167883.html [NC]
+RewriteRule ^uni/psy_interview_brushlinsky/$ page26167883.html [NC]
+
+RewriteRule ^uni/coronadorms_rgsu$ page26167903.html [NC]
+RewriteRule ^uni/coronadorms_rgsu/$ page26167903.html [NC]
+
+RewriteRule ^uni/indian_protests$ page26167884.html [NC]
+RewriteRule ^uni/indian_protests/$ page26167884.html [NC]
+
+RewriteRule ^uni/interview_guriev$ page26167886.html [NC]
+RewriteRule ^uni/interview_guriev/$ page26167886.html [NC]
+
+RewriteRule ^uni/digest_ethics_2$ page26167887.html [NC]
+RewriteRule ^uni/digest_ethics_2/$ page26167887.html [NC]
+
+RewriteRule ^uni/study_vs_work$ page26167888.html [NC]
+RewriteRule ^uni/study_vs_work/$ page26167888.html [NC]
+
+RewriteRule ^uni/studying_and_army$ page26167915.html [NC]
+RewriteRule ^uni/studying_and_army/$ page26167915.html [NC]
+
+RewriteRule ^uni/anoshina$ page26167893.html [NC]
+RewriteRule ^uni/anoshina/$ page26167893.html [NC]
+
+RewriteRule ^uni/professors_quaranrine_experience$ page26167917.html [NC]
+RewriteRule ^uni/professors_quaranrine_experience/$ page26167917.html [NC]
+
+RewriteRule ^uni/digest_ethics3$ page26167894.html [NC]
+RewriteRule ^uni/digest_ethics3/$ page26167894.html [NC]
+
+RewriteRule ^uni/selfisolation_guide$ page26167897.html [NC]
+RewriteRule ^uni/selfisolation_guide/$ page26167897.html [NC]
+
+RewriteRule ^uni/ep_resolution$ page26167898.html [NC]
+RewriteRule ^uni/ep_resolution/$ page26167898.html [NC]
+
+RewriteRule ^uni/korean_students$ page26167925.html [NC]
+RewriteRule ^uni/korean_students/$ page26167925.html [NC]
+
+RewriteRule ^uni/dem_auth_protests$ page26167902.html [NC]
+RewriteRule ^uni/dem_auth_protests/$ page26167902.html [NC]
+
+RewriteRule ^uni/covid_vs_medstudent$ page26167926.html [NC]
+RewriteRule ^uni/covid_vs_medstudent/$ page26167926.html [NC]
+
+RewriteRule ^stadis/duchamp_refusalofwork$ page26167904.html [NC]
+RewriteRule ^stadis/duchamp_refusalofwork/$ page26167904.html [NC]
+
+RewriteRule ^uni/digest_ethics_4$ page26167909.html [NC]
+RewriteRule ^uni/digest_ethics_4/$ page26167909.html [NC]
+
+RewriteRule ^uni/harassment/msu_faculty_of_philology$ page26167931.html [NC]
+RewriteRule ^uni/harassment/msu_faculty_of_philology/$ page26167931.html [NC]
+
+RewriteRule ^uni/students_quarantine_experience$ page26167911.html [NC]
+RewriteRule ^uni/students_quarantine_experience/$ page26167911.html [NC]
+
+RewriteRule ^stadis/berardi_soulatwork$ page26167913.html [NC]
+RewriteRule ^stadis/berardi_soulatwork/$ page26167913.html [NC]
+
+RewriteRule ^uni/shaninkas_library$ page26167918.html [NC]
+RewriteRule ^uni/shaninkas_library/$ page26167918.html [NC]
+
+RewriteRule ^uni/digest_ethics_5$ page26167919.html [NC]
+RewriteRule ^uni/digest_ethics_5/$ page26167919.html [NC]
+
+RewriteRule ^uni/futures_analysis$ page26167921.html [NC]
+RewriteRule ^uni/futures_analysis/$ page26167921.html [NC]
+
+RewriteRule ^uni/lockdown_exams$ page26167946.html [NC]
+RewriteRule ^uni/lockdown_exams/$ page26167946.html [NC]
+
+RewriteRule ^uni/precarity_ivancheva$ page26167923.html [NC]
+RewriteRule ^uni/precarity_ivancheva/$ page26167923.html [NC]
+
+RewriteRule ^uni/expulsions_from_rgsu$ page26167927.html [NC]
+RewriteRule ^uni/expulsions_from_rgsu/$ page26167927.html [NC]
+
+RewriteRule ^uni/taking_a_sabbatical$ page26167928.html [NC]
+RewriteRule ^uni/taking_a_sabbatical/$ page26167928.html [NC]
+
+RewriteRule ^uni/dissernets_blacklist$ page26167929.html [NC]
+RewriteRule ^uni/dissernets_blacklist/$ page26167929.html [NC]
+
+RewriteRule ^uni/harassment/poem$ page26167930.html [NC]
+RewriteRule ^uni/harassment/poem/$ page26167930.html [NC]
+
+RewriteRule ^events/di_school_en$ page26167720.html [NC]
+RewriteRule ^events/di_school_en/$ page26167720.html [NC]
+
+RewriteRule ^uni/state_exams_2020$ page26167933.html [NC]
+RewriteRule ^uni/state_exams_2020/$ page26167933.html [NC]
+
+RewriteRule ^uni/students_international_support$ page26167965.html [NC]
+RewriteRule ^uni/students_international_support/$ page26167965.html [NC]
+
+RewriteRule ^uni/religious_transportuni$ page26167937.html [NC]
+RewriteRule ^uni/religious_transportuni/$ page26167937.html [NC]
+
+RewriteRule ^free_prokopyeva$ page26167969.html [NC]
+RewriteRule ^free_prokopyeva/$ page26167969.html [NC]
+
+RewriteRule ^uni/quarantined_theatre$ page26167942.html [NC]
+RewriteRule ^uni/quarantined_theatre/$ page26167942.html [NC]
+
+RewriteRule ^uni/prosecutors_academy$ page26168015.html [NC]
+RewriteRule ^uni/prosecutors_academy/$ page26168015.html [NC]
+
+RewriteRule ^uni/chaotic_graduation$ page26167947.html [NC]
+RewriteRule ^uni/chaotic_graduation/$ page26167947.html [NC]
+
+RewriteRule ^uni/polcorrect$ page26167709.html [NC]
+RewriteRule ^uni/polcorrect/$ page26167709.html [NC]
+
+RewriteRule ^uni/harassment_guide_serenko$ page26167949.html [NC]
+RewriteRule ^uni/harassment_guide_serenko/$ page26167949.html [NC]
+
+RewriteRule ^uni/proctoring_exams$ page26167950.html [NC]
+RewriteRule ^uni/proctoring_exams/$ page26167950.html [NC]
+
+RewriteRule ^notfound$ page26167932.html [NC]
+RewriteRule ^notfound/$ page26167932.html [NC]
+
+RewriteRule ^uni/target_education$ page26167980.html [NC]
+RewriteRule ^uni/target_education/$ page26167980.html [NC]
+
+RewriteRule ^uni/administration_on_quarantine$ page26167953.html [NC]
+RewriteRule ^uni/administration_on_quarantine/$ page26167953.html [NC]
+
+RewriteRule ^uni/antiharassment_letter$ page26167934.html [NC]
+RewriteRule ^uni/antiharassment_letter/$ page26167934.html [NC]
+
+RewriteRule ^stadis/czechoslovakian_sexology$ page26167955.html [NC]
+RewriteRule ^stadis/czechoslovakian_sexology/$ page26167955.html [NC]
+
+RewriteRule ^uni/exhausted_professors$ page26167983.html [NC]
+RewriteRule ^uni/exhausted_professors/$ page26167983.html [NC]
+
+RewriteRule ^uni/labour_insecurity$ page26167956.html [NC]
+RewriteRule ^uni/labour_insecurity/$ page26167956.html [NC]
+
+RewriteRule ^uni/lockdown_in_dorms$ page26167958.html [NC]
+RewriteRule ^uni/lockdown_in_dorms/$ page26167958.html [NC]
+
+RewriteRule ^uni/generation_p$ page26167986.html [NC]
+RewriteRule ^uni/generation_p/$ page26167986.html [NC]
+
+RewriteRule ^campus_hotline$ page26167941.html [NC]
+RewriteRule ^campus_hotline/$ page26167941.html [NC]
+
+RewriteRule ^stadis/diary_malinowski$ page26167959.html [NC]
+RewriteRule ^stadis/diary_malinowski/$ page26167959.html [NC]
+
+RewriteRule ^uni/noninclusive_universities$ page26168022.html [NC]
+RewriteRule ^uni/noninclusive_universities/$ page26168022.html [NC]
+
+RewriteRule ^uni/mathfac$ page26167726.html [NC]
+RewriteRule ^uni/mathfac/$ page26167726.html [NC]
+
+RewriteRule ^uni/rgsu_quiz$ page26167960.html [NC]
+RewriteRule ^uni/rgsu_quiz/$ page26167960.html [NC]
+
+RewriteRule ^uni/zoomup_photoessay$ page26167944.html [NC]
+RewriteRule ^uni/zoomup_photoessay/$ page26167944.html [NC]
+
+RewriteRule ^uni/68_in_94$ page26167963.html [NC]
+RewriteRule ^uni/68_in_94/$ page26167963.html [NC]
+
+RewriteRule ^uni/quarantined_archives$ page26167964.html [NC]
+RewriteRule ^uni/quarantined_archives/$ page26167964.html [NC]
+
+RewriteRule ^stadis/students_at_bullshit_jobs$ page26167966.html [NC]
+RewriteRule ^stadis/students_at_bullshit_jobs/$ page26167966.html [NC]
+
+RewriteRule ^hse_scholarships$ page26167992.html [NC]
+RewriteRule ^hse_scholarships/$ page26167992.html [NC]
+
+RewriteRule ^uni/votes_for_flats$ page26167968.html [NC]
+RewriteRule ^uni/votes_for_flats/$ page26167968.html [NC]
+
+RewriteRule ^unibureaucracy_vs_sciencestartups$ page26167997.html [NC]
+RewriteRule ^unibureaucracy_vs_sciencestartups/$ page26167997.html [NC]
+
+RewriteRule ^uni/covid_dorm_recommendations$ page26168008.html [NC]
+RewriteRule ^uni/covid_dorm_recommendations/$ page26168008.html [NC]
+
+RewriteRule ^uni/h_project$ page26167739.html [NC]
+RewriteRule ^uni/h_project/$ page26167739.html [NC]
+
+RewriteRule ^support_safronov$ page26167973.html [NC]
+RewriteRule ^support_safronov/$ page26167973.html [NC]
+
+RewriteRule ^wearedoxatoo$ page26168085.html [NC]
+RewriteRule ^wearedoxatoo/$ page26168085.html [NC]
+
+RewriteRule ^uni/uscovid$ page26168037.html [NC]
+RewriteRule ^uni/uscovid/$ page26168037.html [NC]
+
+RewriteRule ^uni/interview_venyavkin_inliberty$ page26167951.html [NC]
+RewriteRule ^uni/interview_venyavkin_inliberty/$ page26167951.html [NC]
+
+RewriteRule ^uni/protests_in_bel_unis$ page26167994.html [NC]
+RewriteRule ^uni/protests_in_bel_unis/$ page26167994.html [NC]
+
+RewriteRule ^uni/censorship_law$ page26168041.html [NC]
+RewriteRule ^uni/censorship_law/$ page26168041.html [NC]
+
+RewriteRule ^uni/washing-machine-and-glass-ceiling$ page26168042.html [NC]
+RewriteRule ^uni/washing-machine-and-glass-ceiling/$ page26168042.html [NC]
+
+RewriteRule ^gudie/how_to_appeal_violation$ page26168098.html [NC]
+RewriteRule ^gudie/how_to_appeal_violation/$ page26168098.html [NC]
+
+RewriteRule ^uni/community_service_experience$ page26167974.html [NC]
+RewriteRule ^uni/community_service_experience/$ page26167974.html [NC]
+
+RewriteRule ^uni/crisis_of_political_science$ page26167977.html [NC]
+RewriteRule ^uni/crisis_of_political_science/$ page26167977.html [NC]
+
+RewriteRule ^uni/gender_stereotypes_at_uni$ page26167979.html [NC]
+RewriteRule ^uni/gender_stereotypes_at_uni/$ page26167979.html [NC]
+
+RewriteRule ^uni/doxaxdumka$ page26167982.html [NC]
+RewriteRule ^uni/doxaxdumka/$ page26167982.html [NC]
+
+RewriteRule ^top_five_mieff$ page26167984.html [NC]
+RewriteRule ^top_five_mieff/$ page26167984.html [NC]
+
+RewriteRule ^uni/appeal_to_ceu$ page26167988.html [NC]
+RewriteRule ^uni/appeal_to_ceu/$ page26167988.html [NC]
+
+RewriteRule ^guides/public_enemy_search$ page26168014.html [NC]
+RewriteRule ^guides/public_enemy_search/$ page26168014.html [NC]
+
+RewriteRule ^uni/online_application$ page26167989.html [NC]
+RewriteRule ^uni/online_application/$ page26167989.html [NC]
+
+RewriteRule ^femtalks_reading_list$ page26167990.html [NC]
+RewriteRule ^femtalks_reading_list/$ page26167990.html [NC]
+
+RewriteRule ^guides/how_to_threaten_students$ page26168056.html [NC]
+RewriteRule ^guides/how_to_threaten_students/$ page26168056.html [NC]
+
+RewriteRule ^stadis/graeber_bullshit_economics$ page26167991.html [NC]
+RewriteRule ^stadis/graeber_bullshit_economics/$ page26167991.html [NC]
+
+RewriteRule ^no_political_dismissals$ page26167993.html [NC]
+RewriteRule ^no_political_dismissals/$ page26167993.html [NC]
+
+RewriteRule ^guides/retaken_exams$ page26168017.html [NC]
+RewriteRule ^guides/retaken_exams/$ page26168017.html [NC]
+
+RewriteRule ^uni/bikbov_vs_kurennoi$ page26167996.html [NC]
+RewriteRule ^uni/bikbov_vs_kurennoi/$ page26167996.html [NC]
+
+RewriteRule ^crimea_show$ page26168063.html [NC]
+RewriteRule ^crimea_show/$ page26168063.html [NC]
+
+RewriteRule ^her_example$ page26168064.html [NC]
+RewriteRule ^her_example/$ page26168064.html [NC]
+
+RewriteRule ^guides/quarantine_uni_survival$ page26168001.html [NC]
+RewriteRule ^guides/quarantine_uni_survival/$ page26168001.html [NC]
+
+RewriteRule ^17_theses_on_justice$ page26168066.html [NC]
+RewriteRule ^17_theses_on_justice/$ page26168066.html [NC]
+
+RewriteRule ^uni/students_mps$ page26168002.html [NC]
+RewriteRule ^uni/students_mps/$ page26168002.html [NC]
+
+RewriteRule ^educational_qualification$ page26168074.html [NC]
+RewriteRule ^educational_qualification/$ page26168074.html [NC]
+
+RewriteRule ^annamarie_jagose_lecture$ page26168003.html [NC]
+RewriteRule ^annamarie_jagose_lecture/$ page26168003.html [NC]
+
+RewriteRule ^uni/uni_problems$ page26168004.html [NC]
+RewriteRule ^uni/uni_problems/$ page26168004.html [NC]
+
+RewriteRule ^guides/financial_aids$ page26168005.html [NC]
+RewriteRule ^guides/financial_aids/$ page26168005.html [NC]
+
+RewriteRule ^uni/dopuskay2019_2$ page26167782.html [NC]
+RewriteRule ^uni/dopuskay2019_2/$ page26167782.html [NC]
+
+RewriteRule ^uni/stop_lukashenkos_professorship$ page26167987.html [NC]
+RewriteRule ^uni/stop_lukashenkos_professorship/$ page26167987.html [NC]
+
+RewriteRule ^lewis_gordon_lecture$ page26168013.html [NC]
+RewriteRule ^lewis_gordon_lecture/$ page26168013.html [NC]
+
+RewriteRule ^market_economy$ page26168127.html [NC]
+RewriteRule ^market_economy/$ page26168127.html [NC]
+
+RewriteRule ^uni/miftakhov_mother$ page26168045.html [NC]
+RewriteRule ^uni/miftakhov_mother/$ page26168045.html [NC]
+
+RewriteRule ^egorzhukov_info$ page26167792.html [NC]
+RewriteRule ^egorzhukov_info/$ page26167792.html [NC]
+
+RewriteRule ^akunin$ page26168087.html [NC]
+RewriteRule ^akunin/$ page26168087.html [NC]
+
+RewriteRule ^uni/skripchenko$ page26168018.html [NC]
+RewriteRule ^uni/skripchenko/$ page26168018.html [NC]
+
+RewriteRule ^student_rights$ page26168046.html [NC]
+RewriteRule ^student_rights/$ page26168046.html [NC]
+
+RewriteRule ^doxa_will_help_you$ page26168048.html [NC]
+RewriteRule ^doxa_will_help_you/$ page26168048.html [NC]
+
+RewriteRule ^stadis/csr$ page26168090.html [NC]
+RewriteRule ^stadis/csr/$ page26168090.html [NC]
+
+RewriteRule ^sss$ page26168135.html [NC]
+RewriteRule ^sss/$ page26168135.html [NC]
+
+RewriteRule ^uni/bullshitjob_experience$ page26168019.html [NC]
+RewriteRule ^uni/bullshitjob_experience/$ page26168019.html [NC]
+
+RewriteRule ^rggu_letter$ page26167795.html [NC]
+RewriteRule ^rggu_letter/$ page26167795.html [NC]
+
+RewriteRule ^14_theses_on_state$ page26168091.html [NC]
+RewriteRule ^14_theses_on_state/$ page26168091.html [NC]
+
+RewriteRule ^uni/aidargubaidulin$ page26167798.html [NC]
+RewriteRule ^uni/aidargubaidulin/$ page26167798.html [NC]
+
+RewriteRule ^take_away_and_divide$ page26168093.html [NC]
+RewriteRule ^take_away_and_divide/$ page26168093.html [NC]
+
+RewriteRule ^guides/student_activities$ page26168021.html [NC]
+RewriteRule ^guides/student_activities/$ page26168021.html [NC]
+
+RewriteRule ^uni/dont_touch_hse$ page26167972.html [NC]
+RewriteRule ^uni/dont_touch_hse/$ page26167972.html [NC]
+
+RewriteRule ^exams_between_jobs$ page26168094.html [NC]
+RewriteRule ^exams_between_jobs/$ page26168094.html [NC]
+
+RewriteRule ^internal_colonialism$ page26168095.html [NC]
+RewriteRule ^internal_colonialism/$ page26168095.html [NC]
+
+RewriteRule ^uni/gender_sexual_identities$ page26168024.html [NC]
+RewriteRule ^uni/gender_sexual_identities/$ page26168024.html [NC]
+
+RewriteRule ^stadis/oni_otvalilis_fragment$ page26168025.html [NC]
+RewriteRule ^stadis/oni_otvalilis_fragment/$ page26168025.html [NC]
+
+RewriteRule ^alla-songofsongs$ page26168097.html [NC]
+RewriteRule ^alla-songofsongs/$ page26168097.html [NC]
+
+RewriteRule ^uni/unsee$ page26168027.html [NC]
+RewriteRule ^uni/unsee/$ page26168027.html [NC]
+
+RewriteRule ^uni/history_abroad$ page26168099.html [NC]
+RewriteRule ^uni/history_abroad/$ page26168099.html [NC]
+
+RewriteRule ^uni/taking_care_of_belarusianstudents$ page26168029.html [NC]
+RewriteRule ^uni/taking_care_of_belarusianstudents/$ page26168029.html [NC]
+
+RewriteRule ^uni/students_for_democracy$ page26168055.html [NC]
+RewriteRule ^uni/students_for_democracy/$ page26168055.html [NC]
+
+RewriteRule ^whats-the-point-if-we-cant-have-fun$ page26168101.html [NC]
+RewriteRule ^whats-the-point-if-we-cant-have-fun/$ page26168101.html [NC]
+
+RewriteRule ^guides/term_paper_p1$ page26168031.html [NC]
+RewriteRule ^guides/term_paper_p1/$ page26168031.html [NC]
+
+RewriteRule ^store$ page26168102.html [NC]
+RewriteRule ^store/$ page26168102.html [NC]
+
+RewriteRule ^democracy_issues$ page26168150.html [NC]
+RewriteRule ^democracy_issues/$ page26168150.html [NC]
+
+RewriteRule ^uni/support_galyamina$ page26168010.html [NC]
+RewriteRule ^uni/support_galyamina/$ page26168010.html [NC]
+
+RewriteRule ^stadis/care_manifesto$ page26168032.html [NC]
+RewriteRule ^stadis/care_manifesto/$ page26168032.html [NC]
+
+RewriteRule ^motherhood_and_university$ page26168103.html [NC]
+RewriteRule ^motherhood_and_university/$ page26168103.html [NC]
+
+RewriteRule ^iran$ page26167866.html [NC]
+RewriteRule ^iran/$ page26167866.html [NC]
+
+RewriteRule ^uni/intersolidarity_letter$ page26167868.html [NC]
+RewriteRule ^uni/intersolidarity_letter/$ page26167868.html [NC]
+
+RewriteRule ^sportswashing$ page26168172.html [NC]
+RewriteRule ^sportswashing/$ page26168172.html [NC]
+
+RewriteRule ^uni/kick_out$ page26167870.html [NC]
+RewriteRule ^uni/kick_out/$ page26167870.html [NC]
+
+RewriteRule ^uni_lockdown$ page26168007.html [NC]
+RewriteRule ^uni_lockdown/$ page26168007.html [NC]
+
+RewriteRule ^call_me_by_my_name$ page26168065.html [NC]
+RewriteRule ^call_me_by_my_name/$ page26168065.html [NC]
+
+RewriteRule ^what-is-a-state$ page26168106.html [NC]
+RewriteRule ^what-is-a-state/$ page26168106.html [NC]
+
+RewriteRule ^is_the_market_a_miracle$ page26168111.html [NC]
+RewriteRule ^is_the_market_a_miracle/$ page26168111.html [NC]
+
+RewriteRule ^inlb_1$ page26168071.html [NC]
+RewriteRule ^inlb_1/$ page26168071.html [NC]
+
+RewriteRule ^uni/asian_studies$ page26168113.html [NC]
+RewriteRule ^uni/asian_studies/$ page26168113.html [NC]
+
+RewriteRule ^uni/birds_in_a_cage$ page26168114.html [NC]
+RewriteRule ^uni/birds_in_a_cage/$ page26168114.html [NC]
+
+RewriteRule ^uni/nadzor$ page26167874.html [NC]
+RewriteRule ^uni/nadzor/$ page26167874.html [NC]
+
+RewriteRule ^dubrovsky_interview$ page26168073.html [NC]
+RewriteRule ^dubrovsky_interview/$ page26168073.html [NC]
+
+RewriteRule ^uni/lgbtq_student_rights$ page26168104.html [NC]
+RewriteRule ^uni/lgbtq_student_rights/$ page26168104.html [NC]
+
+RewriteRule ^obvinenie_doxa$ page26168105.html [NC]
+RewriteRule ^obvinenie_doxa/$ page26168105.html [NC]
+
+RewriteRule ^uni/students_letter$ page26167813.html [NC]
+RewriteRule ^uni/students_letter/$ page26167813.html [NC]
+
+RewriteRule ^philosophers_against_repressions$ page26167814.html [NC]
+RewriteRule ^philosophers_against_repressions/$ page26167814.html [NC]
+
+RewriteRule ^stadis/lacan_as_a_podcaster$ page26168115.html [NC]
+RewriteRule ^stadis/lacan_as_a_podcaster/$ page26168115.html [NC]
+
+RewriteRule ^doxa_case_should_be_closed$ page26168107.html [NC]
+RewriteRule ^doxa_case_should_be_closed/$ page26168107.html [NC]
+
+RewriteRule ^uni/support_belarus$ page26168020.html [NC]
+RewriteRule ^uni/support_belarus/$ page26168020.html [NC]
+
+RewriteRule ^page$ page26168075.html [NC]
+RewriteRule ^page/$ page26168075.html [NC]
+
+RewriteRule ^uni/letter-francaise$ page26167816.html [NC]
+RewriteRule ^uni/letter-francaise/$ page26167816.html [NC]
+
+RewriteRule ^uni/study_abroad$ page26168116.html [NC]
+RewriteRule ^uni/study_abroad/$ page26168116.html [NC]
+
+RewriteRule ^zaiavlenie-doxa-ob-obiske$ page26168076.html [NC]
+RewriteRule ^zaiavlenie-doxa-ob-obiske/$ page26168076.html [NC]
+
+RewriteRule ^mieff$ page26168118.html [NC]
+RewriteRule ^mieff/$ page26168118.html [NC]
+
+RewriteRule ^uni/doxa_i_siloviki$ page26168077.html [NC]
+RewriteRule ^uni/doxa_i_siloviki/$ page26168077.html [NC]
+
+RewriteRule ^anisimovs_career$ page26168109.html [NC]
+RewriteRule ^anisimovs_career/$ page26168109.html [NC]
+
+RewriteRule ^uni/nes_interview$ page26168120.html [NC]
+RewriteRule ^uni/nes_interview/$ page26168120.html [NC]
+
+RewriteRule ^uni/call_for_action$ page26168079.html [NC]
+RewriteRule ^uni/call_for_action/$ page26168079.html [NC]
+
+RewriteRule ^how_to_become_a_komi$ page26168174.html [NC]
+RewriteRule ^how_to_become_a_komi/$ page26168174.html [NC]
+
+RewriteRule ^stadis/elements_of_ecology_separation$ page26168185.html [NC]
+RewriteRule ^stadis/elements_of_ecology_separation/$ page26168185.html [NC]
+
+RewriteRule ^stadis/cyberwar$ page26168121.html [NC]
+RewriteRule ^stadis/cyberwar/$ page26168121.html [NC]
+
+RewriteRule ^armen_monologue$ page26168080.html [NC]
+RewriteRule ^armen_monologue/$ page26168080.html [NC]
+
+RewriteRule ^journalist_under_pressure$ page26168122.html [NC]
+RewriteRule ^journalist_under_pressure/$ page26168122.html [NC]
+
+RewriteRule ^state_vs_media$ page26168125.html [NC]
+RewriteRule ^state_vs_media/$ page26168125.html [NC]
+
+RewriteRule ^volodya_monologue$ page26168081.html [NC]
+RewriteRule ^volodya_monologue/$ page26168081.html [NC]
+
+RewriteRule ^problems_with_dorms$ page26168129.html [NC]
+RewriteRule ^problems_with_dorms/$ page26168129.html [NC]
+
+RewriteRule ^election_control$ page26168131.html [NC]
+RewriteRule ^election_control/$ page26168131.html [NC]
+
+RewriteRule ^lgbt_in_china$ page26168162.html [NC]
+RewriteRule ^lgbt_in_china/$ page26168162.html [NC]
+
+RewriteRule ^dukhovka$ page26168177.html [NC]
+RewriteRule ^dukhovka/$ page26168177.html [NC]
+
+RewriteRule ^stadis/thomas_metzinger$ page26168178.html [NC]
+RewriteRule ^stadis/thomas_metzinger/$ page26168178.html [NC]
+
+RewriteRule ^protests_in_kz$ page26168190.html [NC]
+RewriteRule ^protests_in_kz/$ page26168190.html [NC]
+
+RewriteRule ^no_agents$ page26168128.html [NC]
+RewriteRule ^no_agents/$ page26168128.html [NC]
+
+RewriteRule ^edro_promises$ page26168133.html [NC]
+RewriteRule ^edro_promises/$ page26168133.html [NC]
+
+RewriteRule ^price_of_knowledge$ page26168169.html [NC]
+RewriteRule ^price_of_knowledge/$ page26168169.html [NC]
+
+RewriteRule ^president_boric$ page26168180.html [NC]
+RewriteRule ^president_boric/$ page26168180.html [NC]
+
+RewriteRule ^effective_distancing$ page26167906.html [NC]
+RewriteRule ^effective_distancing/$ page26167906.html [NC]
+
+RewriteRule ^handsoff_game$ page26167892.html [NC]
+RewriteRule ^handsoff_game/$ page26167892.html [NC]
+
+RewriteRule ^zhanaozen$ page26168191.html [NC]
+RewriteRule ^zhanaozen/$ page26168191.html [NC]
+
+RewriteRule ^quarantine$ page26167907.html [NC]
+RewriteRule ^quarantine/$ page26167907.html [NC]
+
+RewriteRule ^statement$ page26168083.html [NC]
+RewriteRule ^statement/$ page26168083.html [NC]
+
+RewriteRule ^stadis/historical_justice$ page26168181.html [NC]
+RewriteRule ^stadis/historical_justice/$ page26168181.html [NC]
+
+RewriteRule ^participative_democracy$ page26168193.html [NC]
+RewriteRule ^participative_democracy/$ page26168193.html [NC]
+
+RewriteRule ^stadis/lubopitstvonepredskazuemostcausalnijemodeli/$ page26168084.html [NC]
+RewriteRule ^stadis/lubopitstvonepredskazuemostcausalnijemodeli//$ page26168084.html [NC]
+
+RewriteRule ^cancel_electronic_voting$ page26168136.html [NC]
+RewriteRule ^cancel_electronic_voting/$ page26168136.html [NC]
+
+RewriteRule ^distrust_of_the_future$ page26168175.html [NC]
+RewriteRule ^distrust_of_the_future/$ page26168175.html [NC]
+
+RewriteRule ^uni/gafurov$ page26168182.html [NC]
+RewriteRule ^uni/gafurov/$ page26168182.html [NC]
+
+RewriteRule ^weapons_of_the_weak$ page26168194.html [NC]
+RewriteRule ^weapons_of_the_weak/$ page26168194.html [NC]
+
+RewriteRule ^stadis/queer_in_ussr$ page26168134.html [NC]
+RewriteRule ^stadis/queer_in_ussr/$ page26168134.html [NC]
+
+RewriteRule ^stadis/philosofsbomboj$ page26168092.html [NC]
+RewriteRule ^stadis/philosofsbomboj/$ page26168092.html [NC]
+
+RewriteRule ^stadis/electronic_bracelets$ page26168137.html [NC]
+RewriteRule ^stadis/electronic_bracelets/$ page26168137.html [NC]
+
+RewriteRule ^freedom_for_masha$ page26168176.html [NC]
+RewriteRule ^freedom_for_masha/$ page26168176.html [NC]
+
+RewriteRule ^hands_off_interview$ page26168184.html [NC]
+RewriteRule ^hands_off_interview/$ page26168184.html [NC]
+
+RewriteRule ^cynical_theories$ page26168196.html [NC]
+RewriteRule ^cynical_theories/$ page26168196.html [NC]
+
+RewriteRule ^uni/letter_mai$ page26167828.html [NC]
+RewriteRule ^uni/letter_mai/$ page26167828.html [NC]
+
+RewriteRule ^who_you_are$ page26168086.html [NC]
+RewriteRule ^who_you_are/$ page26168086.html [NC]
+
+RewriteRule ^agents_test$ page26168138.html [NC]
+RewriteRule ^agents_test/$ page26168138.html [NC]
+
+RewriteRule ^sex_blog$ page26168197.html [NC]
+RewriteRule ^sex_blog/$ page26168197.html [NC]
+
+RewriteRule ^guide/harassmentuni$ page26168036.html [NC]
+RewriteRule ^guide/harassmentuni/$ page26168036.html [NC]
+
+RewriteRule ^stadis/homintern$ page26168139.html [NC]
+RewriteRule ^stadis/homintern/$ page26168139.html [NC]
+
+RewriteRule ^prison_as_a_space_for_self-education$ page26168186.html [NC]
+RewriteRule ^prison_as_a_space_for_self-education/$ page26168186.html [NC]
+
+RewriteRule ^how_to_make_udmurt_art$ page26168195.html [NC]
+RewriteRule ^how_to_make_udmurt_art/$ page26168195.html [NC]
+
+RewriteRule ^presidential_grants_fund$ page26168143.html [NC]
+RewriteRule ^presidential_grants_fund/$ page26168143.html [NC]
+
+RewriteRule ^lack_of_health_workers$ page26168187.html [NC]
+RewriteRule ^lack_of_health_workers/$ page26168187.html [NC]
+
+RewriteRule ^antiwar_movement$ page26168198.html [NC]
+RewriteRule ^antiwar_movement/$ page26168198.html [NC]
+
+RewriteRule ^uni/liberal-university-summer2020/$ page26168039.html [NC]
+RewriteRule ^uni/liberal-university-summer2020//$ page26168039.html [NC]
+
+RewriteRule ^mediastrike_for_doxa$ page26168088.html [NC]
+RewriteRule ^mediastrike_for_doxa/$ page26168088.html [NC]
+
+RewriteRule ^friend_or_foe$ page26168188.html [NC]
+RewriteRule ^friend_or_foe/$ page26168188.html [NC]
+
+RewriteRule ^communism_of_the_twentieth_century$ page26168199.html [NC]
+RewriteRule ^communism_of_the_twentieth_century/$ page26168199.html [NC]
+
+RewriteRule ^stadis/teens_and_museums$ page26168040.html [NC]
+RewriteRule ^stadis/teens_and_museums/$ page26168040.html [NC]
+
+RewriteRule ^pivozavr_from_lytkarino$ page26168146.html [NC]
+RewriteRule ^pivozavr_from_lytkarino/$ page26168146.html [NC]
+
+RewriteRule ^government_youth_organizations$ page26168189.html [NC]
+RewriteRule ^government_youth_organizations/$ page26168189.html [NC]
+
+RewriteRule ^random_people$ page26168200.html [NC]
+RewriteRule ^random_people/$ page26168200.html [NC]
+
+RewriteRule ^dattebayo_sasuke_in_moscow_city_court$ page26167595.html [NC]
+RewriteRule ^dattebayo_sasuke_in_moscow_city_court/$ page26167595.html [NC]
+
+RewriteRule ^uni/academic_migration$ page26168147.html [NC]
+RewriteRule ^uni/academic_migration/$ page26168147.html [NC]
+
+RewriteRule ^human_supremacy$ page26168201.html [NC]
+RewriteRule ^human_supremacy/$ page26168201.html [NC]
+
+RewriteRule ^guides/how_to_learn$ page26168149.html [NC]
+RewriteRule ^guides/how_to_learn/$ page26168149.html [NC]
+
+RewriteRule ^cinema_in_minority_languages$ page26168204.html [NC]
+RewriteRule ^cinema_in_minority_languages/$ page26168204.html [NC]
+
+RewriteRule ^poetsteppe$ page26168192.html [NC]
+RewriteRule ^poetsteppe/$ page26168192.html [NC]
+
+RewriteRule ^local_government$ page26168206.html [NC]
+RewriteRule ^local_government/$ page26168206.html [NC]
+
+RewriteRule ^stadis/meat_milk_climate$ page26168043.html [NC]
+RewriteRule ^stadis/meat_milk_climate/$ page26168043.html [NC]
+
+RewriteRule ^sex_by_touch$ page26168207.html [NC]
+RewriteRule ^sex_by_touch/$ page26168207.html [NC]
+
+RewriteRule ^stadis/writers_against_absolutism$ page26168151.html [NC]
+RewriteRule ^stadis/writers_against_absolutism/$ page26168151.html [NC]
+
+RewriteRule ^defense_of_representative_democracy$ page26168209.html [NC]
+RewriteRule ^defense_of_representative_democracy/$ page26168209.html [NC]
+
+RewriteRule ^the_end_of_facebook$ page26168210.html [NC]
+RewriteRule ^the_end_of_facebook/$ page26168210.html [NC]
+
+RewriteRule ^uni/academy_rights_faq$ page26167922.html [NC]
+RewriteRule ^uni/academy_rights_faq/$ page26167922.html [NC]
+
+RewriteRule ^uni/students_in_court$ page26167864.html [NC]
+RewriteRule ^uni/students_in_court/$ page26167864.html [NC]
+
+RewriteRule ^write_like_a_grrrl$ page26168208.html [NC]
+RewriteRule ^write_like_a_grrrl/$ page26168208.html [NC]
+
+RewriteRule ^hse_alumni_open_letter_2021$ page26168051.html [NC]
+RewriteRule ^hse_alumni_open_letter_2021/$ page26168051.html [NC]
+
+RewriteRule ^vaccination_cool$ page26168153.html [NC]
+RewriteRule ^vaccination_cool/$ page26168153.html [NC]
+
+RewriteRule ^donate-18274$ page26168052.html [NC]
+RewriteRule ^donate-18274/$ page26168052.html [NC]
+
+RewriteRule ^country_of_languages$ page26168154.html [NC]
+RewriteRule ^country_of_languages/$ page26168154.html [NC]
+
+RewriteRule ^new_ethics_and_spirit_of_capitalism$ page26168214.html [NC]
+RewriteRule ^new_ethics_and_spirit_of_capitalism/$ page26168214.html [NC]
+
+RewriteRule ^law_vs_justice$ page26168155.html [NC]
+RewriteRule ^law_vs_justice/$ page26168155.html [NC]
+
+RewriteRule ^mythic_copyright$ page26168216.html [NC]
+RewriteRule ^mythic_copyright/$ page26168216.html [NC]
+
+RewriteRule ^uni/comment_experts$ page26167841.html [NC]
+RewriteRule ^uni/comment_experts/$ page26167841.html [NC]
+
+RewriteRule ^uni/saharovo$ page26168053.html [NC]
+RewriteRule ^uni/saharovo/$ page26168053.html [NC]
+
+RewriteRule ^uni/duma_edu$ page26168157.html [NC]
+RewriteRule ^uni/duma_edu/$ page26168157.html [NC]
+
+RewriteRule ^donbass_students$ page26168213.html [NC]
+RewriteRule ^donbass_students/$ page26168213.html [NC]
+
+RewriteRule ^uni/covid_monitoring$ page26168054.html [NC]
+RewriteRule ^uni/covid_monitoring/$ page26168054.html [NC]
+
+RewriteRule ^chudakovas_lessons$ page26168158.html [NC]
+RewriteRule ^chudakovas_lessons/$ page26168158.html [NC]
+
+RewriteRule ^baqyt$ page26168218.html [NC]
+RewriteRule ^baqyt/$ page26168218.html [NC]
+
+RewriteRule ^uni/ethics_discussion$ page26167843.html [NC]
+RewriteRule ^uni/ethics_discussion/$ page26167843.html [NC]
+
+RewriteRule ^memorial_dissolution$ page26168159.html [NC]
+RewriteRule ^memorial_dissolution/$ page26168159.html [NC]
+
+RewriteRule ^euphoria$ page26168217.html [NC]
+RewriteRule ^euphoria/$ page26168217.html [NC]
+
+RewriteRule ^uni/oriental_studies$ page26168219.html [NC]
+RewriteRule ^uni/oriental_studies/$ page26168219.html [NC]
+
+RewriteRule ^uni/theendofpolicing/$ page26168057.html [NC]
+RewriteRule ^uni/theendofpolicing//$ page26168057.html [NC]
+
+RewriteRule ^democracy_in_kyrgyzstan$ page26168160.html [NC]
+RewriteRule ^democracy_in_kyrgyzstan/$ page26168160.html [NC]
+
+RewriteRule ^ded-s-batey$ page26168220.html [NC]
+RewriteRule ^ded-s-batey/$ page26168220.html [NC]
+
+RewriteRule ^memo_25th$ page26168161.html [NC]
+RewriteRule ^memo_25th/$ page26168161.html [NC]
+
+RewriteRule ^donbass_explainer$ page26168224.html [NC]
+RewriteRule ^donbass_explainer/$ page26168224.html [NC]
+
+RewriteRule ^non-hierarchical-russia-of-the-future/$ page26168062.html [NC]
+RewriteRule ^non-hierarchical-russia-of-the-future//$ page26168062.html [NC]
+
+RewriteRule ^devochki_i_institucii$ page26168165.html [NC]
+RewriteRule ^devochki_i_institucii/$ page26168165.html [NC]
+
+RewriteRule ^now_green$ page26168168.html [NC]
+RewriteRule ^now_green/$ page26168168.html [NC]
+
+RewriteRule ^topcringe_of_the_year$ page26168211.html [NC]
+RewriteRule ^topcringe_of_the_year/$ page26168211.html [NC]
+
+RewriteRule ^femagainstwar$ page26168236.html [NC]
+RewriteRule ^femagainstwar/$ page26168236.html [NC]
+
+RewriteRule ^fuckwar$ page26168226.html [NC]
+RewriteRule ^fuckwar/$ page26168226.html [NC]
+
+RewriteRule ^shutdown_guide$ page26168227.html [NC]
+RewriteRule ^shutdown_guide/$ page26168227.html [NC]
+
+RewriteRule ^antiwarletter$ page26168249.html [NC]
+RewriteRule ^antiwarletter/$ page26168249.html [NC]
+
+RewriteRule ^hse_doxa$ page26167851.html [NC]
+RewriteRule ^hse_doxa/$ page26167851.html [NC]
+
+RewriteRule ^3467ghly66djkg5583dgthmk32568paxk3$ page26168237.html [NC]
+RewriteRule ^3467ghly66djkg5583dgthmk32568paxk3/$ page26168237.html [NC]
+
+RewriteRule ^novosti/vojna-v-ukraine-onlajn/$ page26168241.html [NC]
+RewriteRule ^novosti/vojna-v-ukraine-onlajn//$ page26168241.html [NC]
+
+RewriteRule ^nastya$ page26168242.html [NC]
+RewriteRule ^nastya/$ page26168242.html [NC]
+
+RewriteRule ^nastya_en$ page26168243.html [NC]
+RewriteRule ^nastya_en/$ page26168243.html [NC]
+
+RewriteRule ^uni/harassment/editorial$ page26167935.html [NC]
+RewriteRule ^uni/harassment/editorial/$ page26167935.html [NC]
+
+RewriteRule ^uni/harassment/editorial_2$ page26167936.html [NC]
+RewriteRule ^uni/harassment/editorial_2/$ page26167936.html [NC]
+
+RewriteRule ^head_2$ page26524197.html [NC]
+RewriteRule ^head_2/$ page26524197.html [NC]
+
+RewriteRule ^bunker-standup$ page26622589.html [NC]
+RewriteRule ^bunker-standup/$ page26622589.html [NC]
+
+RewriteRule ^army-call$ page26676350.html [NC]
+RewriteRule ^army-call/$ page26676350.html [NC]
+
+RewriteRule ^lastword-alla$ page26681778.html [NC]
+RewriteRule ^lastword-alla/$ page26681778.html [NC]
+
+RewriteRule ^lastword-volodya$ page26681909.html [NC]
+RewriteRule ^lastword-volodya/$ page26681909.html [NC]
+
+RewriteRule ^lastword-armen$ page26682199.html [NC]
+RewriteRule ^lastword-armen/$ page26682199.html [NC]
+
+RewriteRule ^lastword-natasha$ page26682361.html [NC]
+RewriteRule ^lastword-natasha/$ page26682361.html [NC]
+
+RewriteRule ^medicals$ page26708609.html [NC]
+RewriteRule ^medicals/$ page26708609.html [NC]
+
+RewriteRule ^children-and-war$ page26757205.html [NC]
+RewriteRule ^children-and-war/$ page26757205.html [NC]
+
+RewriteRule ^reprint-yuga$ page26801811.html [NC]
+RewriteRule ^reprint-yuga/$ page26801811.html [NC]
+
+RewriteRule ^volunteer-diary$ page26841237.html [NC]
+RewriteRule ^volunteer-diary/$ page26841237.html [NC]
+
+RewriteRule ^mariupol$ page26852706.html [NC]
+RewriteRule ^mariupol/$ page26852706.html [NC]
+
+RewriteRule ^ukrainian-monologues$ page26852956.html [NC]
+RewriteRule ^ukrainian-monologues/$ page26852956.html [NC]
+
+RewriteRule ^platforms-and-war$ page26853253.html [NC]
+RewriteRule ^platforms-and-war/$ page26853253.html [NC]
+
+RewriteRule ^studying-abroad$ page26853549.html [NC]
+RewriteRule ^studying-abroad/$ page26853549.html [NC]
+
+RewriteRule ^school-workers$ page26905014.html [NC]
+RewriteRule ^school-workers/$ page26905014.html [NC]
+
+RewriteRule ^apologies$ page26906074.html [NC]
+RewriteRule ^apologies/$ page26906074.html [NC]
+
+RewriteRule ^initiatives$ page26914399.html [NC]
+RewriteRule ^initiatives/$ page26914399.html [NC]
+
+RewriteRule ^spbgu-students$ page26915115.html [NC]
+RewriteRule ^spbgu-students/$ page26915115.html [NC]
+
+RewriteRule ^no-rent$ page26916001.html [NC]
+RewriteRule ^no-rent/$ page26916001.html [NC]
+
+RewriteRule ^court$ page26931906.html [NC]
+RewriteRule ^court/$ page26931906.html [NC]
+
+RewriteRule ^volunteers-abroad$ page26932097.html [NC]
+RewriteRule ^volunteers-abroad/$ page26932097.html [NC]
+
+RewriteRule ^applying-abroad$ page26932930.html [NC]
+RewriteRule ^applying-abroad/$ page26932930.html [NC]
+
+RewriteRule ^reported-by-dad$ page27012485.html [NC]
+RewriteRule ^reported-by-dad/$ page27012485.html [NC]
+
+RewriteRule ^artsakh$ page27058689.html [NC]
+RewriteRule ^artsakh/$ page27058689.html [NC]
+
+RewriteRule ^expertka$ page27109210.html [NC]
+RewriteRule ^expertka/$ page27109210.html [NC]
+
+RewriteRule ^stop-her$ page27111638.html [NC]
+RewriteRule ^stop-her/$ page27111638.html [NC]
+
+RewriteRule ^discrimination$ page27157708.html [NC]
+RewriteRule ^discrimination/$ page27157708.html [NC]
+
+RewriteRule ^antiwar-students$ page27190136.html [NC]
+RewriteRule ^antiwar-students/$ page27190136.html [NC]
+
+RewriteRule ^frenchprotests$ page27212461.html [NC]
+RewriteRule ^frenchprotests/$ page27212461.html [NC]
+
+RewriteRule ^kherson$ page27223433.html [NC]
+RewriteRule ^kherson/$ page27223433.html [NC]
+
+RewriteRule ^filtration-camps$ page27423188.html [NC]
+RewriteRule ^filtration-camps/$ page27423188.html [NC]
+
+RewriteRule ^arkadiy-kots$ page27531491.html [NC]
+RewriteRule ^arkadiy-kots/$ page27531491.html [NC]
+
+RewriteRule ^sokrat-sutuga$ page27557383.html [NC]
+RewriteRule ^sokrat-sutuga/$ page27557383.html [NC]
+
+RewriteRule ^9-may$ page27589312.html [NC]
+RewriteRule ^9-may/$ page27589312.html [NC]
+
+RewriteRule ^save-sasha$ page27690544.html [NC]
+RewriteRule ^save-sasha/$ page27690544.html [NC]
+
+RewriteRule ^localelections2022$ page27754962.html [NC]
+RewriteRule ^localelections2022/$ page27754962.html [NC]
+
+RewriteRule ^putins-history$ page27797284.html [NC]
+RewriteRule ^putins-history/$ page27797284.html [NC]
+
+RewriteRule ^stagesofgenocide$ page27843122.html [NC]
+RewriteRule ^stagesofgenocide/$ page27843122.html [NC]
+
+RewriteRule ^zakharova-dialogue$ page27934287.html [NC]
+RewriteRule ^zakharova-dialogue/$ page27934287.html [NC]
+
+RewriteRule ^iran-students$ page28048262.html [NC]
+RewriteRule ^iran-students/$ page28048262.html [NC]
+
+RewriteRule ^trust-ukrainians$ page28182856.html [NC]
+RewriteRule ^trust-ukrainians/$ page28182856.html [NC]
+
+RewriteRule ^favicon.ico$ https://static.tildacdn.com/tild3839-3838-4766-a565-396130376130/favicon_2.ico [R=302,L]
+
